@@ -3,7 +3,47 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="bottom">
+    android:background="#F0F0F0"
+    android:gravity="top">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_button"
+        android:background="@drawable/camera_button"
+        android:id="@+id/takePicture"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000"
+        android:paddingTop="50px"
+        android:id="@+id/introview"
+        android:text="You SnapWhere'd that photo at:"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000"
+        android:paddingLeft="50px"
+        android:id="@+id/lon"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/introview"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000"
+        android:paddingLeft="50px"
+        android:id="@+id/lat"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lon"/>
 
     <ImageView
         android:contentDescription="@string/new_pic_desc"
@@ -15,26 +55,5 @@
         android:layout_alignParentLeft="true"
         android:layout_above="@+id/takePicture" />
 
-    <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/take_picture"
-            android:id="@+id/takePicture"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true" />
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/lon"
-            android:layout_gravity="center"/>
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/lat"
-            android:layout_below="@+id/lon"/>
 
 </RelativeLayout>

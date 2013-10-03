@@ -12,6 +12,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,9 +35,11 @@ public class CameraActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
+
         final GPS gps = new GPS(this);
 
-        Button take_picture = (Button) findViewById(R.id.takePicture);
+        ImageButton take_picture = (ImageButton) findViewById(R.id.takePicture);
+
 
         take_picture.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +50,7 @@ public class CameraActivity extends Activity {
                 mUri = Uri.fromFile(f);
                 startActivityForResult(i, TAKE_PICTURE);
                 pictureTaken = true;
+
 
                 //get coordinates of da pic
                 if (pictureTaken){

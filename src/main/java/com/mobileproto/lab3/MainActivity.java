@@ -14,17 +14,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Button toFlashlight = (Button) findViewById(R.id.to_flashlight);
         Button toCamera = (Button) findViewById(R.id.to_camera);
-        //Button toGPS = (Button) findViewById(R.id.to_gps);
-        //Button toMicrophone = (Button) findViewById(R.id.to_microphone);
-
-/*        toFlashlight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToFlashlight(view);
-            }
-        });*/
 
         toCamera.setOnClickListener(new View.OnClickListener() {
             @Override
